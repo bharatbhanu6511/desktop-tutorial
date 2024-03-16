@@ -4,6 +4,7 @@ const ColorInput = ({count,setCount}) => {
   return (
     <div>
         <button onClick={()=>setCount(count-1)} >decrease</button>      
+        <button onClick={()=>setCount(0)} >reset</button>      
         <button onClick={()=>setCount(count+1)} >increase</button>      
     </div>
   )
