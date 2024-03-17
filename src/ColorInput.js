@@ -1,11 +1,13 @@
 import React from 'react'
 
-const ColorInput = ({count,setCount}) => {
+const ColorInput = ({ setColor, setBoxText }) => {
   return (
-    <div>
-        <button onClick={()=>setCount(count-1)} >decrease</button>      
-        <button onClick={()=>setCount(0)} >reset</button>      
-        <button onClick={()=>setCount(count+1)} >increase</button>      
+    <div className='colorInput'>
+      <input type="text" name="" id="" placeholder='Add color name'
+        onChange={(e) => {
+          setColor(`${e.target.value}`)
+          setBoxText(e.target.value)
+        }} autoFocus />
     </div>
   )
 }

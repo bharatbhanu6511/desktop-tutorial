@@ -1,9 +1,10 @@
 import React from 'react'
 
-const ColorBox = ({count,setCount}) => {
+const ColorBox = ({color,boxText}) => {
+  // const bg=document.getElementById('colorBox').style
   return (
-    <div>
-        <p>{count}</p>      
+    <div id='colorBox' style={{backgroundColor:`${color}`}}>
+        <p style={{color:color==='black' && color!=='white'?'white':'black'}} >{boxText==='white'?'white':boxText}</p>      
     </div>
   )
 }
